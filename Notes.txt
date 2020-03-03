@@ -1,0 +1,13 @@
+Return full library
+https://localhost:44304/api/songapi/
+
+Retrieve specific song:
+https://localhost:44304/api/songapi/{id}
+
+
+
+
+
+TODO:
+Write logging methods and underlying structure
+DataAccess logging since it can't circularly reference Logging

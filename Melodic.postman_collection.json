@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "379d1bf4-8704-40ce-a332-58eba2b78b21",
+		"name": "Melodic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetLibrary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44304/api/songapi",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44304",
+					"path": [
+						"api",
+						"songapi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSong",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44304/api/songapi/17",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44304",
+					"path": [
+						"api",
+						"songapi",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostSong",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Coming Home\",\n\t\"artist\":\"Peter Schilling\",\n\t\"lyrics\":\"Standing there alone, the ship is waiting.  All systems are go.  Are you sure?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44304/api/songapi",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44304",
+					"path": [
+						"api",
+						"songapi"
+					]
+				},
+				"description": "Posts a new song or an update to an existing."
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSong",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44304/api/songapi/17",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44304",
+					"path": [
+						"api",
+						"songapi",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPlaylists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44304/api/playlistapi",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44304",
+					"path": [
+						"api",
+						"playlistapi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPlaylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SavePlaylist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"descriptor\": {\n        \"name\": \"Space\",\n        \"description\": \"Ode to extra-terrestrial travel\"\n    },\n    \"songs\": [\n        {\n            \"songId\": 15,\n            \"title\": \"Coming Home\",\n            \"artist\": \"Peter Schilling\",\n            \"lyrics\": \"Standing there alone, the ship is waiting.  All systems are go.  Are you sure?  Control is not convinced, but the computer has the evidence.\"\n        },\n        {\n            \"songId\": 18,\n            \"title\": \"Coming Home\",\n            \"artist\": \"Shiny Toy Guns\",\n            \"lyrics\": \"Standing there alone, the ship is waiting.  All systems are go.  Are you sure?  Control is not convinced, but the computer has the evidence.\"\n        },\n        {\n            \"songId\": 19,\n            \"title\": \"Space Oddity\",\n            \"artist\": \"David Bowie\",\n            \"lyrics\": \"Ground control to Major Tom.  Commencing countdown enginges on.  Take your protein pill and may God's love be with you.\"\n        },\n        {\n            \"songId\": 20,\n            \"title\": \"Rocket Man\",\n            \"artist\": \"Elton John\",\n            \"lyrics\": \"She packed my bags last night pre-flight.  Zero hour, nine a.m.  And I'm gonna be high as a kite by then.\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44304/api/playlistapi",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44304",
+					"path": [
+						"api",
+						"playlistapi"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
